@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800;900&family=Sofia+Sans:wght@400;500;600;800;900&display=swap');
+
+@font-face {
+    font-family: 'Genshin Impact';
+    src: url('../assets/fonts/zh-cn.ttf') format('truetype'),
+    url('../assets/fonts/ja-jp.ttf') format('truetype');
+}
+
+:root {
+    /* font config */
+
+    --main-font: 'Sofia Sans', sans-serif;
+    --secondary-font: 'Poppins', sans-serif;
+    --genshin-font: 'Genshin Impact', 'Sofia Sans', sans-serif;
+
+    /* Color palette */
+
+    --black: #040405;
+    --white: #F3F3F3;
+    --dark-purple: #130d26;
+    --main-purple: #2E285C;
+    --light-purple: #4F489E;
+    --dark-lilac: #6E76CB;
+    --lavender: #C5BEE5;
+    --pastel-blue: #536DA1;
+    --pastel-light-blue: #84AFE0;
+    --rose: #A857DD;
+    --burned-rose: #7B659B;
+}

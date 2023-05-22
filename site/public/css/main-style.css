@@ -1,0 +1,193 @@
+@import url(theme.css);
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-family: var(--main-font);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--main-purple);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), transparent), url(../assets/images/background-home.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+li, a, button {
+    font-family: var(--genshin-font);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+header {
+    margin-bottom: 33vh;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--black);
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--rose);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-purple);
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+
+.links {
+    list-style: none;
+    margin-left: 150px;
+}
+
+.links li {
+    display: inline-block;
+    padding: 0px 20px;
+    text-transform: uppercase;
+}
+
+.links a {
+    position: relative;
+    color: var(--white);
+    padding: 0 10px;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--rose);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+.buttons button {
+    padding: 9px 25px;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: rgba(42, 40, 92, 0.8);
+}
+
+/* FIM DA NAVBAR */
+
+/* INFO MAIN */
+
+.content {
+    display: flex;
+    line-height: 5vh;
+    margin-top: 22vh;
+}
+
+.content .info {
+    margin-left: 10vw;
+    line-height: 4vh;
+    align-items: left;
+    color: var(--white);
+}
+
+.content .info h2 {
+    font-family: var(--genshin-font);
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 6vh;
+    text-transform: uppercase;
+}
+
+.content .info .descricao {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50vh;
+}
+
+.download-btn {
+    margin-left: 150px;
+    background-color: var(--main-purple);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/* FIM DA INFO MAIN */
+
+/* SOBRE O JOGO */
+
+.container-about {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/images/about-background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-yt-player {
+    place-self: center;
+    width: 50vw;
+    margin: 1rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    /* background-color: var(--main-purple); */
+}
+
+.box-info {
+    margin-left: 5vw;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 50vh;
+}
+
+.box-info h1 {
+    color: var(--white);
+}
+
+.box-info p {
+    color: var(--white);
+}
+
+/* FIM SOBRE O JOGO */
+
+/* PERSONAGENS */
