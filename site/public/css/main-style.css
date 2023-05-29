@@ -203,6 +203,7 @@ button:hover {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent), url(../assets/images/char-background.jpeg);
     background-position: center;
     background-size: cover;
+    color: white;
 }
 
 .card-container {
