@@ -20,9 +20,6 @@ html {
 body {
     height: 100vh;
     background-color: var(--main-purple);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), transparent), url(../assets/images/background-home.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 li, a, button {
@@ -34,7 +31,12 @@ li, a, button {
 }
 
 header {
-    margin-bottom: 33vh;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), transparent), url(../assets/images/background-home.jpg);
+    background-size: cover;
+    background-position: center;
+    /* margin-bottom: 33vh; */
 }
 
 ::-webkit-scrollbar {
@@ -191,3 +193,117 @@ button:hover {
 /* FIM SOBRE O JOGO */
 
 /* PERSONAGENS */
+
+.characters {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-image: linear-gradient(to right, var(--main-purple), rgba(122,66,39,255), #75b39b, #35664d);
+}
+
+.card-container {
+    width: 80%;
+    height: 600px;
+    perspective: 900px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-container > .char-card.flip {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.char-card {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.char-card:nth-child(2) {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+
+.front-card, .back-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-card {
+    background-image: url(../assets/images/raiden-card-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.front-card:nth-child(2) {
+    background-image: url(../assets/images/zhongli-card-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.back-card {
+    background-image: linear-gradient(to bottom, #130d26, var(--main-purple));
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#zhongli .back-card {
+    background-image: linear-gradient(to bottom, var(--black), rgba(122,66,39,255));
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#venti .back-card {
+    background-image: linear-gradient(to bottom, var(--black), #75b39b);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#nahida .back-card {
+    background-image: linear-gradient(to bottom, var(--black), #35664d);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-card h1 {
+    color: var(--white);
+    font-family: var(--genshin-font);
+}
+
+.back-card p {
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+}
+

@@ -13,6 +13,10 @@
     <!-- STYLE -->
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/main-style.css">
+
+    <!-- SCRIPT -->
+    <script defer src="js/char-slider.js"></script>
+
 </head>
 
 <body>
@@ -21,17 +25,17 @@
 
     <header>
         <nav>
-        <img class="logo" src="assets/images/genshin-logo.png" alt="" style="width: 8rem;">
+            <img class="logo" src="assets/images/genshin-logo.png" alt="" style="width: 8rem;">
             <ul class="links">
                 <li><a href="#about-game">Sobre o jogo</a></li>
                 <li><a href="#characters">Personagens</a></li>
                 <li><a href="#regions">Regiões</a></li>
             </ul>
-        <div class="buttons">
-            <a href="signin.html"><button>Entrar</button></a>
-            <a href="signup.html"><button>Criar conta</button></a>
-        </div>
-    </nav>
+            <div class="buttons">
+                <a href="signin.html"><button>Entrar</button></a>
+                <a href="signup.html"><button>Criar conta</button></a>
+            </div>
+        </nav>
 
         <div class="content">
             <div class="info">
@@ -48,36 +52,93 @@
 
     <!-- SOBRE O JOGO -->
 
-        <section id="about-game">
-            <div class="container-about">
-                <div class="box-info">
-                    <h1>SOBRE O JOGO</h1>
-                    <p>Genshin Impact é um RPG de ação que conta a história de dois irmãos gêmeos que viajam entre mundos. Em uma de suas viagens, eles visitam o mundo de Teyvat, mas quando decidiram viajar para o próximo, foram impedidos por uma deusa desconhecida que rouba os poderes dos gêmeos e captura um deles, impedindo que o outro siga seu caminho. Ao acordar sem memória e sem poderes, o gêmeo restante conhece um tipo de fada voadora e começa sua jornada pelo mundo de Teyvat, viajando pelas nações em busca de sua irmã perdida e informações sobre a deusa desconhecida que cruzou seu caminho.</p>
+    <section id="about-game">
+        <div class="container-about">
+            <div class="box-info">
+                <h1>SOBRE O JOGO</h1>
+                <p>Genshin Impact é um RPG de ação que conta a história de dois irmãos gêmeos que viajam entre mundos.
+                    Em uma de suas viagens, eles visitam o mundo de Teyvat, mas quando decidiram viajar para o próximo,
+                    foram impedidos por uma deusa desconhecida que rouba os poderes dos gêmeos e captura um deles,
+                    impedindo que o outro siga seu caminho. Ao acordar sem memória e sem poderes, o gêmeo restante
+                    conhece um tipo de fada voadora e começa sua jornada pelo mundo de Teyvat, viajando pelas nações em
+                    busca de sua irmã perdida e informações sobre a deusa desconhecida que cruzou seu caminho.</p>
+            </div>
+            <div class="box-yt-player">
+                <div class="embed">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TAlKhARUcoY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
-                    <div class="box-yt-player">
-                        <div class="embed">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TAlKhARUcoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERSONAGENS -->
+
+    <section class="characters" id="characters">
+        <div class="card-container">
+
+            <div id="raiden" class="char-card">
+                <div class="front-card"></div>
+                <div class="back-card">
+                    <h1>Raiden Shogun</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nisi. Laborum officiis
+                        excepturi nesciunt impedit amet esse odit, dignissimos quaerat, facilis eveniet doloremque,
+                        maiores consectetur laudantium? Aliquid cumque quidem quos?</p>
+                    <button onclick="window.location.href = 'https://youtu.be/mvrW4aKwAXw'">
+                        Assista a demo do personagem
+                    </button>
                 </div>
-        </section>
+            </div>
 
-        <!-- PERSONAGENS -->
+            <div id="zhongli" class="char-card">
+                <div class="front-card" style="background-image: url(assets/images/zhongli-card-background.jpg);"></div>
+                <div class="back-card">
+                    <h1>Zhongli</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nisi. Laborum officiis
+                        excepturi nesciunt impedit amet esse odit, dignissimos quaerat, facilis eveniet doloremque,
+                        maiores consectetur laudantium? Aliquid cumque quidem quos?</p>
+                    <button onclick="window.location.href = 'https://youtu.be/4oBpaBEMBIM'">
+                        Assista a demo do personagem
+                    </button>
+                </div>
+            </div>
 
-        <section id="characters">
-            <div class="cards-box">
-                <h1 class="cards-title">Raiden Shogun</h1>
-                <img src="" alt="PNG-raiden" class="imgs-cards">
-                <p class="cards-text">Alguns dos nossos valores como empresa que valem destacar
-                    são comprometimento, honestidade, transparência e eficiência.</p>
-            </div>
-        </section>
+            <div id="venti" class="char-card">
+                <div class="front-card" style="background-image: url(assets/images/venti-card-background.jpg);"></div>
+                <div class="back-card">
+                    <h1>Venti</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nisi. Laborum officiis
+                        excepturi nesciunt impedit amet esse odit, dignissimos quaerat, facilis eveniet doloremque,
+                        maiores consectetur laudantium? Aliquid cumque quidem quos?</p>
+                    <button onclick="window.location.href = 'https://youtu.be/TSsWsCdiiPI'">
+                        Assista a demo do personagem
+                    </button>
+                </div>
+            </div>
 
-        <!-- REGIÕES -->
+            <div id="nahida" class="char-card">
+                <div class="front-card" style="background-image: url(assets/images/nahida-card-background.jpg);"></div>
+                <div class="back-card">
+                    <h1>Nahida</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nisi. Laborum officiis
+                        excepturi nesciunt impedit amet esse odit, dignissimos quaerat, facilis eveniet doloremque,
+                        maiores consectetur laudantium? Aliquid cumque quidem quos?</p>
+                    <button onclick="window.location.href = 'https://youtu.be/dpZhGzZ3hNc'">
+                        Assista a demo do personagem
+                    </button>
+                </div>
+            </div>
 
-        <section id="regions">
+        </div>
+    </section>
 
-        </section>
+    <!-- REGIÕES -->
+
+    <section id="regions">
+
+    </section>
 
 </body>
 
