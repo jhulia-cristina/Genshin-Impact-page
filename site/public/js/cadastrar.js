@@ -47,7 +47,7 @@ function cadastrar() {
             swal("Cadastro realizado com sucesso");
 
             setTimeout(() => {
-                window.location = "login.html";
+                window.location = "signin.html";
             }, "2000")
 
             // limparFormulario();
