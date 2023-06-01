@@ -200,6 +200,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;  
+    flex-direction: column;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent), url(../assets/images/char-background.jpeg);
     background-position: center;
     background-size: cover;
@@ -207,7 +208,7 @@ button:hover {
 }
 
 .card-container {
-    width: 80%;
+    width: 90%;
     height: 600px;
     perspective: 900px;
     display: flex;
@@ -225,17 +226,17 @@ button:hover {
     position: relative;
     transition: transform 1500ms;
     transform-style: preserve-3d;
-    margin: 10px;
+    margin: 20px;
     cursor: pointer;
 }
 
-.char-card:nth-child(2) {
+/* .char-card:nth-child(2) {
     width: 600px;
     height: 600px;
     position: relative;
     transition: transform 1500ms;
     transform-style: preserve-3d;
-}
+} */
 
 
 .front-card, .back-card {
@@ -260,7 +261,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 #zhongli .back-card {
@@ -270,7 +271,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 #venti .back-card {
@@ -280,7 +281,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 #nahida .back-card {
@@ -290,7 +291,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 .back-card h1 {
@@ -302,6 +303,48 @@ button:hover {
     color: var(--white);
     font-weight: 500;
     text-align: center;
+}
+
+.back-card button {
+    background-color: var(--dark-purple);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+#zhongli .back-card button {
+    background-color: rgba(122,66,39,255);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+#venti .back-card button {
+    background-color: rgba(122,66,39,255);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+#nahida .back-card button {
+    background-color: rgba(122,66,39,255);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.title {
+    text-transform: uppercase;
+    margin-right: 60rem;
+    font-family: var(--genshin-font);
+}
+
+.title h1 {
+    font-size: 3rem;
 }
 
 /* FIM SECTION PERSONAGENS */
