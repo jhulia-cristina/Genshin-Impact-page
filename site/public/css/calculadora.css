@@ -1,0 +1,84 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-family: var(--secondary-font);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 99vw;
+    min-height: 100vh;
+}
+
+li, a, button {
+    font-family: var(--genshin-font);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* CALCULADORA */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-left: 5vw;
+    line-height: 3.5vh;
+  }
+
+section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(100% - 100px);
+    min-height: calc(100vh - 180px);
+    min-height: 300px;
+    align-items: center;
+    padding: 50px;
+    left: 40px;
+    top: -22vh;
+}
+
+table {
+    position: relative;
+    min-width: 500px;
+    min-height: 400px;
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    z-index: 10;
+    padding: 20px;
+    backdrop-filter: blur(25px);
+  }
+  
+  td {
+    width: 30px;
+    height: 30px;
+  }

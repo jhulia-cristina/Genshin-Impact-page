@@ -1,0 +1,80 @@
+@import url(theme.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: var(--secondary-font);
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, blue, 0.2);
+    text-decoration: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin-top: 3vh;
+}
+
+.logo img {
+    width: 80px;
+}
+
+a {
+    position: relative;
+    color: var(--black);
+    font-size: 14px;
+    display: table;
+    width: 200px;
+    padding: 10px;
+    top: 5px;
+    /* margin-left: 10px; */
+}
+
+span {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    /* top: 14px; */
+    font-size: 28px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+a:hover {
+    background: #eee;
+    border-radius: 30px;
+}
+
+nav:hover {
+    width: 200px;
+    transition: all 0.5s ease;
+
+}
+
+ul {
+    margin-top: 20vh;
+}

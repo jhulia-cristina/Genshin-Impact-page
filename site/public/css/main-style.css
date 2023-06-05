@@ -12,7 +12,7 @@
 }
 
 html {
-    font-family: var(--main-font);
+    font-family: var(--secondary-font);
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -176,8 +176,7 @@ button:hover {
 }
 
 .box-info {
-    margin-left: 5vw;
-    font-weight: 300;
+    margin-left: 3vw;
     font-size: 25px;
     line-height: 50vh;
 }
@@ -322,7 +321,7 @@ button:hover {
 }
 
 #venti .back-card button {
-    background-color: rgba(122,66,39,255);
+    background-color: #75b39b;
     border: none;
     border-radius: 15px;
     padding: 15px 25px;
@@ -330,7 +329,7 @@ button:hover {
 }
 
 #nahida .back-card button {
-    background-color: rgba(122,66,39,255);
+    background-color: #35664d;
     border: none;
     border-radius: 15px;
     padding: 15px 25px;

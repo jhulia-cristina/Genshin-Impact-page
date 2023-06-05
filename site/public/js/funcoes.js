@@ -3,13 +3,13 @@ function validarSessao() {
     // aguardar();
 
     var email = sessionStorage.EMAIL_USUARIO;
-    var nome = sessionStorage.NOME_USUARIO;
+    var nickname = sessionStorage.NICKNAME_USUARIO;
 
     var b_usuario = document.getElementById("b_usuario");
 
-    if (email != null && nome != null) {
+    if (email != null && nickname != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
-        b_usuario.innerHTML = nome;
+        b_usuario.innerHTML = nickname;
 
         // finalizarAguardar();
     } else {
