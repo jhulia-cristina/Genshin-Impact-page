@@ -7,10 +7,16 @@ addEventListener("DOMContentLoaded", () => {
     }).then((resposta) => {
         if (resposta.ok) {
             resposta.json().then(json => {
-                console.log(json);
-                json.forEach(linha => {
-                    addEventListener()
-                })
+                console.log(json[0]);
+                for (let contador = 0; contador < 5; contador++) {
+                    document.querySelector(".ranking-list").innerHTML += `
+                    <tr>
+                    <td>${contador + 1}</td>
+                    <td>${json[contador].nickname}</td>
+                    <td>${json[contador].pontos}</td>
+                    </tr>
+                    ` 
+                }
             })
         }
     });

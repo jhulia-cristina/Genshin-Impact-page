@@ -60,11 +60,9 @@ btnFinalizar.onclick = () => {
     if (resposta.ok) {
         console.log(resposta)
             
-        .then((result) => {
             setTimeout(function () {
                 window.location = "./score.html";
             }, 1000);
-        })
     } else {
         throw ("Houve um erro ao tentar realizar o cadastro!");
     }

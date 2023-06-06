@@ -350,3 +350,173 @@ button:hover {
 
 /* REGIÕES */
 
+#region {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent), url(../assets/images/region-background.jpeg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.card-container {
+    width: 90%;
+    height: 600px;
+    perspective: 900px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-container > .region-card.flip {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.region-card {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* .char-card:nth-child(2) {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+} */
+
+
+.front-card, .back-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-card {
+    background-image: url(../assets/images/ianzuma-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.back-card {
+    background-image: linear-gradient(to bottom, #130d26, var(--main-purple));
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#liyue .back-card {
+    background-image: linear-gradient(to bottom, var(--black), rgba(122,66,39,255));
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#Mondstadt .back-card {
+    background-image: linear-gradient(to bottom, var(--black), #75b39b);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#Sumeru .back-card {
+    background-image: linear-gradient(to bottom, var(--black), #35664d);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.back-card h1 {
+    color: var(--white);
+    font-family: var(--genshin-font);
+}
+
+.back-card p {
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+}
+
+.back-card button {
+    background-color: var(--dark-purple);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+#liyue .back-card button {
+    background-color: rgba(122,66,39,255);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+#Mondstadt .back-card button {
+    background-color: #75b39b;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+#Sumeru .back-card button {
+    background-color: #35664d;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.title {
+    text-transform: uppercase;
+    margin-right: 60rem;
+    font-family: var(--genshin-font);
+}
+
+.title h1 {
+    font-size: 3rem;
+}
+
+/* FOOTEER */
+
+footer {
+    background-color: var(--main-purple);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  p {
+    margin: 0;
+  }
+  

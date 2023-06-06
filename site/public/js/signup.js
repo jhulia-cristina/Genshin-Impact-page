@@ -8,9 +8,13 @@ function cadastrar() {
 
     if (nicknameVar == "" || emailVar == "" || senhaVar == "" || arconteFavVar == "") {
         // cardErro.style.display = "block"
-        swal("Ops","Preencha os campos obrigatórios","Error")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Preencha todos os campos',
+          })
 
-        finalizarAguardar();
+        // finalizarAguardar();
         return false;
     }
     else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
@@ -44,7 +48,11 @@ function cadastrar() {
         if (resposta.ok) {
             // cardErro.style.display = "block";
 
-            swal("Cadastro realizado com sucesso");
+            Swal.fire({
+                icon: 'success',
+                title: 'Bom Trabalho!',
+                text: 'Cadastro realizado com sucesso',
+              })
 
             setTimeout(() => {
                 window.location = "signin.html";
@@ -53,7 +61,11 @@ function cadastrar() {
             // limparFormulario();
             // finalizarAguardar();
         } else {
-            swal("Erro ao tentar realizar o cadastro");
+            Swal.fire({
+                icon: 'error',
+                title: 'Ops',
+                text: 'Erro ao realizar o cadastro',
+              })
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);

@@ -6,8 +6,12 @@ function entrar() {
 
     if (emailVar == "" || senhaVar == "") {
         // cardErro.style.display = "block"
-        swal ("Ops" , "Preencha os campos para fazer o login",  "error");
-        // finalizarAguardar();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Preencha todos os campos',
+          })
+        finalizarAguardar();
         return false;
     }
     // else {
@@ -48,7 +52,11 @@ function entrar() {
 
         } else {
 
-            swal ("Ops",  "Email e/ou senha incorreto(s)" ,  "error");
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Email e/ou Senha incorreta',
+              })
 
             resposta.text().then(texto => {
                 console.error(texto);

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de dano - Calcule o dano do seu personagem</title>
+  <title>Cálculo de Dano</title>
 
   <link rel="stylesheet" href="../css/calculadora.css">
   <link rel="stylesheet" href="../css/nav_dash.css">
+
+  <script src="../js/calculadora.js"></script>
 
   <link rel="shortcut icon" href="../assets/favicon/page_icon.ico" type="image/x-icon">
   <link rel="stylesheet"
@@ -18,8 +17,6 @@
 </head>
 
 <body>
-
-  <!-- INICIO DA NAV -->
 
   <aside>
     <nav>
@@ -49,12 +46,29 @@
     </nav>
   </aside>
 
-  <!-- FIM DA NAV -->
-
-  <!-- INICIO DA CALCULADORA -->
-
-  
-
+  <main class="calculadora-container">
+    <div class="container">
+      <h2>Cálculo de Dano</h2>
+      <label for="ataque">Ataque:</label>
+      <input type="number" id="ataque">
+      <label for="bonusDano">Bônus de Dano (%):</label>
+      <input type="number" id="bonusDano">
+      <label for="danoTalento">Dano do Talento (%):</label>
+      <input type="number" id="danoTalento">
+      <label for="danoCritico">Dano Crítico (%):</label>
+      <input type="number" id="danoCritico">
+      <label for="resistencia">Resistência (%):</label>
+      <input type="number" id="resistencia">
+      <label for="reducaoDano">Redução de Dano (%):</label>
+      <input type="number" id="reducaoDano">
+      <label for="danoReacao">Dano de Reação:</label>
+      <input type="number" id="danoReacao">
+      <label for="EM">Efeito de Maestria (EM) (%):</label>
+      <input type="number" id="EM">
+      <button onclick="calcularDano()">Calcular Dano</button>
+      <div id="output"></div>
+    </div>
+  </main>
 </body>
 
 </html>
