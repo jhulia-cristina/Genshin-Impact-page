@@ -1,3 +1,5 @@
+@import url(theme.css);
+
 /* RESET */
 
 * {
@@ -32,20 +34,20 @@ li, a, button {
 
 .boasVindas {
     margin-left: 17vw;
-    margin-top: 10vh;
+    margin-top: 16vh;
 }
 
 .boasVindas span {
-    margin-top: 15vh;
+    /* margin-top: 15vh; */
     font-size: 22px;
     color: #000;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .telagraph {
     display: flex;
     justify-content: center;
-    margin-top: 9vh;
+    margin-top: 3vh;
 }
 
 .graph1 {

@@ -17,34 +17,46 @@ function buscarUltimasMedidas(idUsuario, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-// function buscarPrimeirasMedidas(idUsuario, limite_linhas) {
+function buscarPrimeirasMedidas(idPersonagem, limite_linhas) {
 
-//     instrucaoSql = ''
+    instrucaoSql = ''
 
-//     if (process.env.AMBIENTE_PROCESSO == "producao") {
-//         instrucaoSql = `SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Electro' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Geo' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Anemo' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Hydro' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Pyro' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Cryo' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Dendro' GROUP BY elemento;`;
-//     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-//         instrucaoSql = `SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Electro' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Geo' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Anemo' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Hydro' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Pyro' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Cryo' GROUP BY elemento;
-//         SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Dendro' GROUP BY elemento;`;
-//     } else {
-//         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
-//         return
-//     }
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `SELECT COUNT(elemento) as qtdPersonagens FROM personagens WHERE elemento = 'Electro' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Geo' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Anemo' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Hydro' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Pyro' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Cryo' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Dendro' GROUP BY elemento;`;
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `SELECT COUNT(elemento) as qtdPersonagens FROM personagens WHERE elemento = 'Electro' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Geo' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Anemo' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Hydro' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Pyro' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Cryo' GROUP BY elemento
+        UNION ALL
+        SELECT COUNT(elemento) FROM personagens WHERE elemento = 'Dendro' GROUP BY elemento;`;
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
 
-//     console.log("Executando a instrução SQL: \n" + instrucaoSql);
-//     return database.executar(instrucaoSql);
-// }
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
 
 // function buscarMedidasEmTempoReal(idUsuario) {
 
@@ -78,7 +90,7 @@ function buscarUltimasMedidas(idUsuario, limite_linhas) {
 
 
 module.exports = {
-    buscarUltimasMedidas
-    // buscarPrimeirasMedidas,
+    buscarUltimasMedidas,
+    buscarPrimeirasMedidas
     // buscarMedidasEmTempoReal
 }

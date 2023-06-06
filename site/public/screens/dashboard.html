@@ -49,7 +49,7 @@
   </aside>
 
   <div class="boasVindas">
-    <span>Bem-vindo(a), </span>
+    <span>Bem-vindo(a),</span>
     <span id="b_usuario"></span>
   </div>
 
@@ -65,11 +65,6 @@
     </div>
   </div>
 
-  <div class="analytics">
-    <span>Quantidade de usuários cadastrados</span>
-    <div id="totalUsuarios"></div>
-  </div>
-
 </body>
 
 </html>
@@ -77,19 +72,6 @@
 <script>
 
   b_usuario.innerHTML = sessionStorage.NICKNAME_USUARIO;
-
-  function TodosUsuarios() {
-    fetch("/usuarios/qtdUsuarios", {
-      method: "GET"
-    }).then(function (resposta) {
-      if (resposta.ok) {
-        resposta.json().then((json) => {
-          console.log(json)
-          totalUsuarios.innerHTML = `${json[0].NumeroUsuarios}`
-        })
-      }
-    })
-  }
 
   let proximaAtualizacao;
 
@@ -184,5 +166,81 @@
     //   config
     // );
   }
+
+  function obterDadosGrafico2(idUsuario) {
+
+if (proximaAtualizacao != undefined) {
+  clearTimeout(proximaAtualizacao);
+}
+
+fetch(`/medidas/primeiras/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+  if (response.ok) {
+    response.json().then(function (resposta) {
+      console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+      plotarGrafico2(resposta, idUsuario);
+    });
+  } else {
+    console.error('Nenhum dado encontrado ou erro na API');
+  }
+})
+  .catch(function (error) {
+    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+  });
+}
+
+// Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+// Configura o gráfico (cores, tipo, etc), materializa-o na página e,
+// A função *plotarGrafico* também invoca a função *atualizarGrafico*
+function plotarGrafico2(resposta, idPersonagem) {
+
+console.log('iniciando plotagem do gráfico...');
+
+// Criando estrutura para plotar gráfico - labels
+let labels = [];
+
+// Criando estrutura para plotar gráfico - dados
+let dados = {
+  labels: labels,
+  datasets: [{
+    label: 'Quantidade de personagens',
+    data: [],
+    fill: true,
+    borderColor: 'rgb(75, 192, 192)',
+    backgroundColor: `#46485E`,
+    tension: 0.1
+  }]
+};
+
+console.log('----------------------------------------------')
+console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+console.log(resposta)
+
+// Inserindo valores recebidos em estrutura para plotar o gráfico
+for (i = 0; i < resposta.length; i++) {
+  var registro = resposta[i];
+  labels.push(registro.qtdPersonagens);
+  dados.datasets[0].data.push(registro.qtdPersonagens);
+  // dados.datasets[1].data.push(registro.qntPet);
+}
+
+console.log('----------------------------------------------')
+console.log('O gráfico será plotado com os respectivos valores:')
+console.log('Labels:')
+console.log(labels)
+console.log('Dados:')
+console.log(dados.datasets)
+console.log('----------------------------------------------')
+
+// Criando estrutura para plotar gráfico - config
+const config = {
+  type: 'bar',
+  data: dados,
+};
+let myChart2 = new Chart(
+  document.getElementById(`myChartCanvas2`),
+  config
+);
+}
 
 </script>
